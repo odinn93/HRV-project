@@ -20,30 +20,4 @@ plot_rr=1;
                                                         subjects,method);
 [QTV_meanNstd_before,QTV_meanNstd_after,b_q,a_q] = Indice_meanNstd(QTV_indices,...
                                                           subjects,method);
-%%
-indices_b=HRV_meanNstd_before;
-indices_a=HRV_meanNstd_after;
-hold on
-t_vlf=0:1;
-x_vlf=[indices_b(1,5),indices_a(1,5)];
-y_vlf=[indices_b(2,5),indices_a(2,5)];
-errorbar(t_vlf,x_vlf,y_vlf,'-x','DisplayName',"VLF power")
-title("Boxplot ("+method+")")
-legend('-DynamicLegend','Location','nw')
-
-t_lf=2:3;
-x_lf=[indices_b(1,6),indices_a(1,6)];
-y_lf=[indices_b(2,6),indices_a(2,6)];
-errorbar(t_lf,x_lf,y_lf,'-x','DisplayName',"LF power")
-title("Boxplot ("+method+")")
-
-t_hf=4:5;
-x_hf=[indices_b(1,7),indices_a(1,7)];
-y_hf=[indices_b(2,7),indices_a(2,7)];
-errorbar(t_hf,x_hf,y_hf,'-x','DisplayName',"HF power")
-
-t_tp=6:7;
-x_tp=[indices_b(1,8),indices_a(1,8)];
-y_tp=[indices_b(2,8),indices_a(2,8)];
-errorbar(t_tp,x_tp,y_tp,'-x','DisplayName',"Total power")
 
