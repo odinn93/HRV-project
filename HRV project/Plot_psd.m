@@ -1,4 +1,4 @@
-function Plot(f,pxx,method,status,i,type)
+function Plot_psd(f,pxx,method,status,i,type)
     figure
     vlf=f(f>0.004 & f<0.04);
     vlf_ind=find(f>0.004 & f<0.04);
