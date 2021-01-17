@@ -114,11 +114,11 @@ for i=subjects
             QTV_indices{2,i}{2,j}{1,1}="periodogram";
             QTV_indices{2,i}{2,j}{2,1}=QTV_ind;
             if plot_flag 
-                Plot(frr,pxxrr,"periodogram",status,i,"RR")
-                Plot(fqt,pxxqt,"periodogram",status,i,"QT")
+                Plot_psd(frr,pxxrr,"periodogram",status,i,"RR")
+                Plot_psd(fqt,pxxqt,"periodogram",status,i,"QT")
                 if plot_rr
                     [~,f,pxx]=CalcIndices(rtime_taco_new*1000,t_re,peaks_tb_ind,"periodogram");
-                    Plot(f,pxx,"periodogram",status,i,"Resp")
+                    Plot_psd(f,pxx,"periodogram",status,i,"Resp")
                 end
             end
         end
@@ -131,11 +131,11 @@ for i=subjects
             QTV_indices{2,i}{2,j}{1,2}="welch";
             QTV_indices{2,i}{2,j}{2,2}=QTV_ind;
             if plot_flag 
-                Plot(frr,pxxrr,"welch",status,i,"RR")
-                Plot(fqt,pxxqt,"welch",status,i,"QT")
+                Plot_psd(frr,pxxrr,"welch",status,i,"RR")
+                Plot_psd(fqt,pxxqt,"welch",status,i,"QT")
                if plot_rr
                    [~,f,pxx]=CalcIndices(rtime_taco_new*1000,t_re,peaks_tb_ind,"welch");
-                   Plot(f,pxx,"welch",status,i,"Resp")
+                   Plot_psd(f,pxx,"welch",status,i,"Resp")
                end
             end
         end
@@ -148,11 +148,11 @@ for i=subjects
             QTV_indices{2,i}{2,j}{1,3}="lomb";
             QTV_indices{2,i}{2,j}{2,3}=QTV_ind;
             if plot_flag 
-                Plot(frr,pxxrr,"lomb",status,i,"RR")
-                Plot(fqt,pxxqt,"lomb",status,i,"QT")
+                Plot_psd(frr,pxxrr,"lomb",status,i,"RR")
+                Plot_psd(fqt,pxxqt,"lomb",status,i,"QT")
                 if plot_rr
                    [~,f,pxx]=CalcIndices(rtime_new*1000,t,peaks_tb_ind,"lomb");
-                   Plot(f,pxx,"lomb",status,i,"Resp")
+                   Plot_psd(f,pxx,"lomb",status,i,"Resp")
                end
             end
         end
